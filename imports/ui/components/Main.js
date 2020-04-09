@@ -12,10 +12,19 @@ import { findChats } from "../../api/helpers";
 const Main = () => {
   const [messageVisible, setMessageVisible] = useState(false);
   const [selectedChat, setSelectedChat] = useState({});
+  const [loading, setLoading] = useState(true);
 
   Tracker.autorun(() => {
-    Meteor.subscribe("chats.mine", (id = Meteor.userId()));
-    Meteor.subscribe("messages.all");
+    const chatsReady = Meteor.subscribe(
+      "chats.mine",
+      (id = Meteor.userId())
+    ).ready();
+
+    const messageReady = Meteor.subscribe("messages.all").ready;
+
+    if (chatsReady && messageReady) {
+      setLoading(false);
+    }
   });
 
   const handleChatClick = (_id) => {
@@ -29,16 +38,22 @@ const Main = () => {
   };
   return (
     <StyledMain>
-      <Left
-        chats={findChats()}
-        onChatClick={handleChatClick}
-        selectedChat={selectedChat}
-      />
-      <Right
-        right
-        messageVisible={messageVisible}
-        selectedChat={selectedChat}
-      />
+      {!loading ? (
+        <>
+          <Left
+            chats={findChats()}
+            onChatClick={handleChatClick}
+            selectedChat={selectedChat}
+          />
+          <Right
+            right
+            messageVisible={messageVisible}
+            selectedChat={selectedChat}
+          />
+        </>
+      ) : (
+        <p>Loading</p>
+      )}
     </StyledMain>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import StyledFooter from "../elements/StyledFooter";
 import FontAwesonme from "react-fontawesome";
 
-const Footer = () => {
+const Footer = ({ onSend }) => {
   const [inputValue, setInputValue] = useState("");
   const [iconName, setIconName] = useState("microphone");
 
@@ -15,6 +15,12 @@ const Footer = () => {
     setInputValue(event.target.value);
   };
 
+  const handleClick = () => {
+    if (iconName === "microphone") {
+      return;
+    }
+    onSend(inputValue);
+  };
   return (
     <StyledFooter>
       <FontAwesonme className="iconFooter" name="smile" />
@@ -27,7 +33,11 @@ const Footer = () => {
           onChange={handleChange}
         />
       </label>
-      <FontAwesonme className="iconFooter" name={iconName} />
+      <FontAwesonme
+        className="iconFooter"
+        name={iconName}
+        onClick={handleClick}
+      />
     </StyledFooter>
   );
 };

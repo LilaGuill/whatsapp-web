@@ -7,6 +7,11 @@ if (Meteor.isServer) {
   Meteor.publish("messages.all", () => {
     return MessagesCollection.find();
   });
+  Meteor.methods({
+    "message.insert": (message) => {
+      return MessagesCollection.insert(message);
+    },
+  });
 }
 
 export const DummyMessages = [
