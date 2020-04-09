@@ -9,7 +9,7 @@ import ChatList from "./ChatList";
 
 const icons = ["circle-notch", "comment-alt", "ellipsis-v"];
 
-const Left = ({ chats }) => {
+const Left = ({ chats, onChatClick, selectedChat }) => {
   return (
     <StyledLeft>
       <Header icons={icons} iconClass="greyIcon">
@@ -17,7 +17,11 @@ const Left = ({ chats }) => {
       </Header>
       <Status />
       <SearchBar />
-      <ChatList chats={chats} />
+      <ChatList
+        chats={chats}
+        onChatClick={onChatClick}
+        selectedChat={selectedChat}
+      />
     </StyledLeft>
   );
 };

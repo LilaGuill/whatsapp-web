@@ -1,9 +1,16 @@
 import { ChatsCollection } from "./chats";
+import { MessagesCollection } from "./messages";
 import { Meteor } from "meteor/meteor";
 
 export const createDummyChats = (chats) => {
   chats.forEach((chat) => {
     ChatsCollection.insert(chat);
+  });
+};
+
+export const createDummyMessages = (messages) => {
+  messages.forEach((message) => {
+    MessagesCollection.insert(message);
   });
 };
 

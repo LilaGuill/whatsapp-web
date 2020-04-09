@@ -4,14 +4,21 @@ import Avatar from "../components/Avatar";
 import Moment from "react-moment";
 import moment from "moment";
 
-const ChatItem = ({ title, picture, lastMessage }) => {
+const ChatItem = ({
+  title,
+  picture,
+  lastMessage,
+  onChatClick,
+  _id,
+  active,
+}) => {
   const { content, createAt } = lastMessage;
 
   const now = moment().format("D/MM/Y");
   const today = now === moment(createAt).format("D/MM/Y");
 
   return (
-    <StyledChatItem>
+    <StyledChatItem active={active} onClick={() => onChatClick(_id)}>
       <Avatar large avatar_url={picture} />
       <div className="chat--contentContainer">
         <div className="content--line1">
