@@ -1,8 +1,11 @@
 import { Meteor } from "meteor/meteor";
 import "../imports/api/users";
+import { ChatsCollection, dummyChats } from "../imports/api/chats";
+import { createDummyChats } from "../imports/api/helpers";
 
 Meteor.startup(() => {
   const numberOfUsers = Meteor.users.find().count();
+  const numberOfChats = ChatsCollection.find().count();
   if (numberOfUsers === 0) {
     console.log("Il n'y a pas d'utilisateurs");
     // Accounts.createUser({
@@ -12,5 +15,18 @@ Meteor.startup(() => {
     // });
   } else {
     console.log("Il y a des utilisateurs");
+  }
+
+  if (numberOfChats === 0) {
+    console.log("Il n'y a pas de chat");
+
+    // createDummyChats(dummyChats);
+    // Accounts.createUser({
+    //   username: "Chloé",
+    //   password: "password",
+    //   profile: { phone: "0945677889" },
+    // });
+  } else {
+    console.log("Il y a des chats");
   }
 });

@@ -5,10 +5,11 @@ import Header from "./Header";
 import Avatar from "./Avatar";
 import Status from "./Status";
 import SearchBar from "./SearchBar";
+import ChatList from "./ChatList";
 
 const icons = ["circle-notch", "comment-alt", "ellipsis-v"];
 
-const Left = () => {
+const Left = ({ chats }) => {
   return (
     <StyledLeft>
       <Header icons={icons} iconClass="greyIcon">
@@ -16,6 +17,7 @@ const Left = () => {
       </Header>
       <Status />
       <SearchBar />
+      <ChatList chats={chats} />
     </StyledLeft>
   );
 };
