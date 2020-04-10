@@ -6,8 +6,15 @@ import moment from "moment";
 import Day from "./Day";
 import MessageText from "./MessageText";
 import FlipMove from "react-flip-move";
+import FABs from "./FABs";
 
-const MessageBox = ({ messages, selectedChat }) => {
+const MessageBox = ({
+  messages,
+  selectedChat,
+  fabVisible,
+  onInputChange,
+  onFABItemClick,
+}) => {
   let isEven = false;
   const format = "D MMMM Y";
   let messagesEnd;
@@ -76,6 +83,11 @@ const MessageBox = ({ messages, selectedChat }) => {
 
   return (
     <StyledMessageBox>
+      <FABs
+        fabVisible={fabVisible}
+        onInputChange={onInputChange}
+        onFABItemClick={onFABItemClick}
+      />
       <FlipMove>{renderDays()}</FlipMove>
     </StyledMessageBox>
   );

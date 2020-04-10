@@ -7,7 +7,20 @@ import Status from "./Status";
 import SearchBar from "./SearchBar";
 import ChatList from "./ChatList";
 
-const icons = ["circle-notch", "comment-alt", "ellipsis-v"];
+const icons = [
+  {
+    name: "circle-notch",
+    func: () => {},
+  },
+  {
+    name: "comment-alt",
+    func: () => {},
+  },
+  {
+    name: "ellipsis-v",
+    func: () => {},
+  },
+];
 
 const Left = ({ chats, onChatClick, selectedChat }) => {
   return (
