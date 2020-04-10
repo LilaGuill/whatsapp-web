@@ -2,7 +2,7 @@ import React from "react";
 import StyledModal from "../elements/StyledModal";
 import FontAwesone from "react-fontawesome";
 
-const Modal = ({ selectedImage, onClose }) => {
+const Modal = ({ selectedImage, onClose, onUpload }) => {
   return (
     <StyledModal>
       <div className="modal--header">
@@ -21,7 +21,10 @@ const Modal = ({ selectedImage, onClose }) => {
           src={selectedImage}
         />
 
-        <div className="modal--body__fab">
+        <div
+          onClick={() => onUpload("", (type = "image"))}
+          className="modal--body__fab"
+        >
           <FontAwesone name="paper-plane" size="3x" />
         </div>
       </div>

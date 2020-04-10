@@ -19,7 +19,7 @@ const Footer = ({ onSend }) => {
     if (iconName === "microphone") {
       return;
     }
-    onSend(inputValue);
+    onSend(inputValue, (type = "text"));
     setInputValue("");
     setIconName("microphone");
   };

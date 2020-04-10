@@ -7,6 +7,7 @@ import Day from "./Day";
 import MessageText from "./MessageText";
 import FlipMove from "react-flip-move";
 import FABs from "./FABs";
+import MessageImage from "../components/MessageImage";
 
 const MessageBox = ({
   messages,
@@ -46,15 +47,27 @@ const MessageBox = ({
   const renderMessages = (newMessage) => {
     return newMessage.groupedMessages.map((message) => {
       const msgClass = `message message--${message.ownership}`;
-      return (
-        <MessageText
-          key={message._id}
-          content={message.content}
-          msgClass={msgClass}
-          ownership={message.ownership}
-          createAt={message.createAt}
-        />
-      );
+      if (message.type === "image") {
+        const mine = message.ownership === "mine";
+        return (
+          <MessageImage
+            key={message._id}
+            content={message.content}
+            createdAt={message.createAt}
+            mine={mine}
+          />
+        );
+      } else {
+        return (
+          <MessageText
+            key={message._id}
+            content={message.content}
+            msgClass={msgClass}
+            ownership={message.ownership}
+            createAt={message.createAt}
+          />
+        );
+      }
     });
   };
   const scrollToBottom = () => {

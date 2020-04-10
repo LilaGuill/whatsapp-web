@@ -11,6 +11,16 @@ if (Meteor.isServer) {
     "message.insert": (message) => {
       return MessagesCollection.insert(message);
     },
+    "message.update": (_id, imageUrl) => {
+      return MessagesCollection.update(
+        { _id },
+        {
+          $set: {
+            content: imageUrl,
+          },
+        }
+      );
+    },
   });
 }
 

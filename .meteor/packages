@@ -22,3 +22,5 @@ static-html
 accounts-base
 accounts-password
 react-meteor-data
+ostrio:files
+session
