@@ -5,6 +5,7 @@ import { Meteor } from "meteor/meteor";
 import moment from "moment";
 import Day from "./Day";
 import MessageText from "./MessageText";
+import FlipMove from "react-flip-move";
 
 const MessageBox = ({ messages, selectedChat }) => {
   let isEven = false;
@@ -44,6 +45,7 @@ const MessageBox = ({ messages, selectedChat }) => {
           content={message.content}
           msgClass={msgClass}
           ownership={message.ownership}
+          createAt={message.createAt}
         />
       );
     });
@@ -72,7 +74,11 @@ const MessageBox = ({ messages, selectedChat }) => {
     });
   };
 
-  return <StyledMessageBox>{renderDays()}</StyledMessageBox>;
+  return (
+    <StyledMessageBox>
+      <FlipMove>{renderDays()}</FlipMove>
+    </StyledMessageBox>
+  );
 };
 
 export default MessageBox;

@@ -20,11 +20,13 @@ export const findChats = () => {
     .map((chatCollection) => {
       const otherUserId = findOtherId(chatCollection.participants);
       const { username, profile } = findOtherUser(otherUserId);
+      const lastMessage = findLastMessage(chatCollection._id);
 
       return {
         ...chatCollection,
         title: username,
         picture: profile.picture,
+        lastMessage: { ...lastMessage },
       };
     });
 };
@@ -45,4 +47,11 @@ const findOtherId = (participants) => {
 //
 const findOtherUser = (_id) => {
   return Meteor.users.findOne({ _id });
+};
+
+const findLastMessage = (chatId) => {
+  return MessagesCollection.find(
+    { chatId },
+    { sort: { createAt: -1 } }
+  ).fetch()[0];
 };

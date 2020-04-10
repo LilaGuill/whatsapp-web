@@ -1,13 +1,16 @@
 import React from "react";
 import FontAwesome from "react-fontawesome";
+import Moment from "react-moment";
+import FlipMove from "react-flip-move";
 
-const MessageText = ({ content, msgClass, ownership }) => {
+const MessageText = ({ content, msgClass, ownership, createAt }) => {
   return (
     <div className="messageContainer">
       <div className={msgClass}>
         <p>{content}</p>
         <div className="detailsContainer">
-          <span>12:43</span>
+          <Moment format="HH:mm">{createAt}</Moment>
+
           {ownership === "mine" && <FontAwesome name="check-double" />}
         </div>
       </div>

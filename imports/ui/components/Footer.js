@@ -20,6 +20,8 @@ const Footer = ({ onSend }) => {
       return;
     }
     onSend(inputValue);
+    setInputValue("");
+    setIconName("microphone");
   };
   return (
     <StyledFooter>
