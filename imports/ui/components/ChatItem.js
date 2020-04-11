@@ -3,6 +3,7 @@ import StyledChatItem from "../elements/StyledChatItem";
 import Avatar from "../components/Avatar";
 import Moment from "react-moment";
 import moment from "moment";
+import FontAwesome from "react-fontawesome";
 
 const ChatItem = ({
   title,
@@ -12,7 +13,7 @@ const ChatItem = ({
   _id,
   active,
 }) => {
-  const { content, createAt } = lastMessage;
+  const { content, createAt, type } = lastMessage;
 
   const now = moment().format("D/MM/Y");
   const today = now === moment(createAt).format("D/MM/Y");
@@ -32,7 +33,15 @@ const ChatItem = ({
           </div>
         </div>
         <div className="content--line1">
-          <span className=" content--message">{content}</span>
+          {type === "text" ? (
+            <span className=" content--message">{content}</span>
+          ) : (
+            <span className=" content--message">
+              <FontAwesome name="camera" style={{ marginRight: "0.4rem" }} />
+              photo
+            </span>
+          )}
+
           <div className="chat--badge">4</div>
         </div>
       </div>

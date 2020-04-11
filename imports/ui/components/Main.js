@@ -6,10 +6,13 @@ import Left from "./Left";
 import { withTracker } from "meteor/react-meteor-data";
 import StyledMain from "../elements/StyledMain";
 import { findChats } from "../../api/helpers";
+import OtherPofile from "./OtherProfile";
 
 const Main = ({ loading, chats }) => {
   const [messageVisible, setMessageVisible] = useState(false);
   const [selectedChat, setSelectedChat] = useState({});
+  const [OPvisible, setOPVisible] = useState(false);
+  const [otherId, setOtherId] = useState("");
 
   const handleChatClick = (_id) => {
     if (!messageVisible) {
@@ -18,20 +21,36 @@ const Main = ({ loading, chats }) => {
     const newChat = _.find(chats, { _id });
     setSelectedChat(newChat);
   };
+
+  const handleAvatarClick = (otherId) => {
+    setOPVisible(true);
+    setOtherId(otherId);
+  };
+
+  const handleAvatarClose = () => {
+    setOPVisible(false);
+    setOtherId();
+  };
   return (
     <StyledMain>
       {!loading ? (
         <>
           <Left
+            OPvisible={OPvisible}
             chats={chats}
             onChatClick={handleChatClick}
             selectedChat={selectedChat}
           />
           <Right
+            OPvisible={OPvisible}
             right
             messageVisible={messageVisible}
             selectedChat={selectedChat}
+            onAvatarClick={handleAvatarClick}
           />
+          {OPvisible && (
+            <OtherPofile otherUserId={otherId} onClose={handleAvatarClose} />
+          )}
         </>
       ) : (
         <p>Loading</p>

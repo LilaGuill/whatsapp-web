@@ -34,7 +34,7 @@ export const findChats = () => {
 };
 
 //recherche l'id du deuxième participants
-const findOtherId = (participants) => {
+export const findOtherId = (participants) => {
   const myId = Meteor.userId();
   let otherUserId;
 
@@ -47,7 +47,7 @@ const findOtherId = (participants) => {
 };
 
 //
-const findOtherUser = (_id) => {
+export const findOtherUser = (_id) => {
   return Meteor.users.findOne({ _id });
 };
 

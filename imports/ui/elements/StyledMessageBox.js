@@ -51,7 +51,7 @@ const StyledMessageBox = styled.div`
   }
   .day--span {
     color: ${({ theme }) => theme.messageBox.color.dayspan};
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-transform: uppercase;
   }
   .messageContainer {
@@ -64,7 +64,7 @@ const StyledMessageBox = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: ${({ theme }) => theme.messageBox.color.message};
     background: ${({ theme }) => theme.messageBox.color.messageBackground};
     border-radius: 0.7rem;

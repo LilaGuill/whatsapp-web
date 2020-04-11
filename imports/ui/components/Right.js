@@ -6,11 +6,21 @@ import MessageView from "../components/MessageView";
 const messageText =
   "Whatsapp se connecte à votre télephone pour synchroniser les messages. Pour réduire l'utilisation des données, connectez votre téléphone à un wifi ";
 
-const Right = ({ right, messageVisible, selectedChat }) => {
+const Right = ({
+  right,
+  messageVisible,
+  selectedChat,
+  onAvatarClick,
+  OPvisible,
+}) => {
   return (
-    <StyledRight>
+    <StyledRight OPvisible={OPvisible}>
       {messageVisible ? (
-        <MessageView selectedChat={selectedChat} />
+        <MessageView
+          selectedChat={selectedChat}
+          onAvatarClick={onAvatarClick}
+          OPvisible={OPvisible}
+        />
       ) : (
         <RightImg messageText={messageText} right={right} />
       )}

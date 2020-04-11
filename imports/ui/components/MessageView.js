@@ -11,11 +11,11 @@ import MessageBox from "./MessageBox";
 import { MessagesCollection } from "../../api/messages";
 import Modal from "./Modal";
 import moment from "moment";
-import { uploadFile } from "../../api/helpers";
+import { uploadFile, findOtherUser, findOtherId } from "../../api/helpers";
 
 let fileInput = "";
 
-const MessageView = ({ selectedChat, messages }) => {
+const MessageView = ({ selectedChat, messages, onAvatarClick, OPvisible }) => {
   const [fabVisible, setFabVisible] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -38,7 +38,10 @@ const MessageView = ({ selectedChat, messages }) => {
     console.log("click ok", myInput);
     myInput.click();
   };
-
+  const avatarClick = () => {
+    const otherId = findOtherId(selectedChat.participants);
+    onAvatarClick(otherId);
+  };
   const handleInputChange = (event) => {
     fileInput = event.target.files[0];
     if (fileInput) {
@@ -100,8 +103,8 @@ const MessageView = ({ selectedChat, messages }) => {
 
   return (
     <StyledMessageView>
-      <Header iconClass="greyIcon" icons={icons}>
-        <Avatar avatar_url={selectedChat.picture} />
+      <Header iconClass="greyIcon" icons={icons} OPvisible={OPvisible}>
+        <Avatar avatar_url={selectedChat.picture} onAvatarClick={avatarClick} />
         <div className="headerMsg--container">
           <span className="headerMsg--title">{selectedChat.title}</span>
           <span className="headerMsg--sbTitle">en ligne</span>

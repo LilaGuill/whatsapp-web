@@ -22,9 +22,9 @@ const icons = [
   },
 ];
 
-const Left = ({ chats, onChatClick, selectedChat }) => {
+const Left = ({ chats, onChatClick, selectedChat, OPvisible }) => {
   return (
-    <StyledLeft>
+    <StyledLeft OPvisible={OPvisible}>
       <Header icons={icons} iconClass="greyIcon">
         <Avatar avatar_url={Meteor.user().profile.picture} />
       </Header>
