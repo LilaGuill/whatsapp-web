@@ -12,7 +12,7 @@ const Status = () => {
       <div className="status--textContainer">
         <div className="text--big">Etre averti(e) de nouveaux messages.</div>
         <span className="text--small">
-          Afficher les notification sur le bureau >
+          Afficher les notification sur le bureau
         </span>
       </div>
     </StyledStatus>

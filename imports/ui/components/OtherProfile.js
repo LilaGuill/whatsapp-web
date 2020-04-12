@@ -21,15 +21,16 @@ const OtherProfil = ({ otherUserId, onClose }) => {
                 name="times"
                 className="iconOtherProfile"
                 onClick={onClose}
+                size="2x"
               />
               <span className="OPH--title"></span>
             </div>
           </Header>
           <div className="__scroll">
-            <div className="OP--imageConatiner">
+            <div className="OP--imageContainer">
               <Avatar avatar_url={otherUser.profile.picture} />
             </div>
-            <div className="OPIC--textContainer">
+            <div className="OPIC--txtContainer">
               <span className="OPIC--title">{otherUser.username}</span>
             </div>
             <Actu

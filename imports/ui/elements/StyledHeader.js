@@ -28,19 +28,21 @@ const StyledHeader = styled.div`
   }
   .headerMsg--container {
     text-align: left;
-    width: 58rem;
-    height: 4.5rem;
+    width: 45rem;
+    height: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
   .headerMsg--title {
     color: ${({ theme }) => theme.header.color.title};
-    font-size: 1.6rem;
+    font-size: 22px;
+    padding-left: 10px;
   }
   .headerMsg--sbTitle {
     color: ${({ theme }) => theme.header.color.subTitle};
-    font-size: 1.3rem;
+    font-size: 20px;
+    padding-left: 10px;
   }
 `;
 

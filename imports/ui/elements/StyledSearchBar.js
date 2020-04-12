@@ -7,7 +7,7 @@ const StyledSearchbar = styled.div`
   justify-content: center;
   background: ${({ theme }) => theme.searchBar.color.background};
   width: 100%;
-  height: 7%;
+  height: 11%;
   position: relative;
 
   .searchbar--label {
@@ -27,11 +27,11 @@ const StyledSearchbar = styled.div`
   }
   .searchbar--icon {
     color: ${({ theme }) => theme.searchBar.color.icon};
-    font-size: 1.3rem;
+    font-size: 18px;
     margin-right: 1.5rem;
   }
   .searchbar--input {
-    font-size: 1.5rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 2rem;
     min-height: 2rem;
@@ -44,7 +44,7 @@ const StyledSearchbar = styled.div`
     &::placeholder {
       color: ${({ theme }) => theme.searchBar.color.placeholder};
       opacity: 1;
-      font-size: 1.4rem;
+      font-size: 18px;
     }
   }
 `;

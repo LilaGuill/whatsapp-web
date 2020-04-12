@@ -6,7 +6,7 @@ const StyledFooter = styled.div`
   align-items: center;
   justify-content: space-between;
   width: calc(100% - 3.2rem);
-  height: 6%;
+  height: 4%;
   background: ${({ theme }) => theme.footer.color.background};
   padding: 1rem 1.6rem;
   ${(props) =>
@@ -21,7 +21,7 @@ const StyledFooter = styled.div`
     border-radius: 1.8rem;
     padding-left: 2.5rem;
     padding-right: 2.2rem;
-    height: 4.2rem;
+    height: 3.2rem;
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -29,7 +29,7 @@ const StyledFooter = styled.div`
     justify-content: space-between;
   }
   .message--input {
-    font-size: 1.5rem;
+    font-size: 18px;
     font-weight: 400;
     line-height: 2rem;
     min-height: 2rem;
@@ -42,11 +42,11 @@ const StyledFooter = styled.div`
     &::placeholder {
       color: ${({ theme }) => theme.footer.color.placeholder};
       opacity: 1;
-      font-size: 1.4rem;
+      font-size: 18px;
     }
   }
   .iconFooter {
-    font-size: 3rem;
+    font-size: 2rem;
     color: ${({ theme }) => theme.footer.color.iconFooter};
     cursor: pointer;
   }

@@ -13,12 +13,12 @@ const StyledActu = styled.div`
 
   .actu--title {
     color: #128c7e;
-    font-size: 1.4rem;
+    font-size: 26px
     margin-bottom: 1.9rem;
     font-weight: 500;
   }
   .actu--content {
-    font-size: 1.6rem;
+    font-size: 18px;
     margin-bottom: 1.9rem;
     font-weight: 500;
   }
@@ -29,7 +29,7 @@ const StyledActu = styled.div`
     margin-bottom: 1.9rem;
   }
   .actu--phone {
-    font-size: 1.6rem;
+    font-size: 18px;
     margin-bottom: 1.9rem;
   }
 `;

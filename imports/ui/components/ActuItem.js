@@ -5,8 +5,8 @@ import FontAwesome from "react-fontawesome";
 const ActuItem = ({ red, iconName, content }) => {
   return (
     <StyledActuItem red={red}>
-      <FontAwesome className="AI--icon" name={iconName} />
-      <span>{content}</span>
+      <FontAwesome className="AI--icon" name={iconName} size="xs" />
+      <span style={{ fontSize: "16px" }}>{content}</span>
     </StyledActuItem>
   );
 };

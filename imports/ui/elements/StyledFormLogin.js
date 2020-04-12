@@ -20,7 +20,7 @@ const StyledFormLogin = styled.div`
     margin-right: 1.5rem;
   }
   .input {
-    font-size: 1.5rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 2rem;
     min-height: 2rem;
@@ -33,7 +33,7 @@ const StyledFormLogin = styled.div`
     &::placeholder {
       color: ${({ theme }) => theme.searchBar.color.placeholder};
       opacity: 1;
-      font-size: 1.4rem;
+      font-size: 18px;
     }
   }
   .loginBtn {
@@ -42,7 +42,8 @@ const StyledFormLogin = styled.div`
     padding-left: 2.5rem;
     padding-right: 2.2rem;
     height: 3.5rem;
-    font-size: 1.2rem;
+    font-size: 18px;
+    font-weight: 400;
     background: ${({ theme }) => theme.rightImg.color.bgGreen};
     color: white;
     margin-top: 0.3rem;

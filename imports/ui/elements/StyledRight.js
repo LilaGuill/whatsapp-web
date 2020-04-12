@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 const StyledRight = styled.div`
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 70%;
   height: 100%;
 
   ${({ OPvisible }) =>

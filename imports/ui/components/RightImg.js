@@ -6,7 +6,8 @@ const RightImg = ({ right, messageText, children }) => {
     <StyledRightImg right={right}>
       <img
         alt="bg"
-        className="rigthImg--image"
+        width="400px"
+        className="rightImg--image"
         src="./images/whatsapp-bg-1.jpg"
       ></img>
       <h3 className="rightImg--title">Gardez votre téléphone connecté</h3>

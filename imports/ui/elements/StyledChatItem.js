@@ -6,7 +6,7 @@ const StyledChatItem = styled.div`
   flex-shrink: 0;
   align-items: center;
   width: calc(100% - 3rem);
-  height: 7.5rem;
+  height: 4.5rem;
   cursor: pointer;
   padding: 0 1.5rem;
   background: ${({ theme }) => theme.chatItem.color.backgroundNormal};
@@ -37,11 +37,11 @@ const StyledChatItem = styled.div`
     margin-bottom: 0.3rem;
   }
   .content--line1__title {
-    font-size: 1.6rem;
+    font-size: 20px;
     text-align: left;
   }
   .content--line1__date {
-    font-size: 1.2rem;
+    font-size: 16px;
     color: ${({ theme }) => theme.chatItem.color.date};
     text-align: right;
     margin-top: 0.3rem;
@@ -51,7 +51,7 @@ const StyledChatItem = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 18px;
     color: ${({ theme }) => theme.chatItem.color.message};
     overflow: hidden;
     white-space: nowrap;
@@ -62,8 +62,8 @@ const StyledChatItem = styled.div`
     justify-content: center;
     align-items: center;
     color: white;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 1rem;
     text-align: right;
     margin-left: 2rem;

@@ -47,35 +47,35 @@ const StyledOtherProfile = styled.div`
     justify-content: center;
     align-items: center;
     width: calc(100% - 5.6rem);
-    height: calc(31.8rem - 5.6rem);
+    height: calc(10.8rem - 5.6rem);
     padding: 2.8rem;
     padding-bottom: 1.7rem;
     background: white;
     margin-bottom: 1rem;
   }
   .OP--image {
-    width: 20rem;
-    height: 20rem;
+    width: 27rem;
+    height: 27rem;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 2rem;
   }
   .OPIC--txtContainer {
-    text-align: left;
+    text-align: center;
     width: 100%;
     height: 4.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center
   }
   .OPIC--title {
     color: ${({ theme }) => theme.header.color.title};
-    font-size: 1.9rem;
+    font-size: 22px
     margin-bottom: 0.7rem;
   }
   .OPIC--sbTitle {
     color: ${({ theme }) => theme.header.color.subTitle};
-    font-size: 1.4rem;
+    font-size: 16px
   }
 `;
 

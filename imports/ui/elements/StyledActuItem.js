@@ -29,7 +29,7 @@ const StyledActuItem = styled.div`
   .AI--icon {
     color: rgba(0, 0, 0, 0.3);
     margin-right: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 `;
 
