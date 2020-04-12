@@ -33,7 +33,7 @@ const StyledOtherProfile = styled.div`
     padding: 0 0.9rem;
   }
   .iconOtherProfile {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-right: 3rem;
     color: #929fa6;
     cursor: pointer;

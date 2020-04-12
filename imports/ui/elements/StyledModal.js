@@ -20,10 +20,11 @@ const StyledModal = styled.div`
     background: transparent;
     color: white;
     cursor: pointer;
+    font-size: 1.5rem;
   }
   .modal--header__title {
     font-weight: 200;
-    font-size: 1.9rem;
+    font-size: 22px;
     color: white;
   }
   .modal--body {
@@ -42,8 +43,8 @@ const StyledModal = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     background: #09e85e;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -55,7 +56,7 @@ const StyledModal = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 12rem;
+    height: 15rem;
     width: calc(100% - 4rem);
     padding: 0 2rem;
     background: #d8d8d8;

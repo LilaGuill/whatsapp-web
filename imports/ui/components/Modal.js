@@ -8,7 +8,6 @@ const Modal = ({ selectedImage, onClose, onUpload }) => {
       <div className="modal--header">
         <FontAwesone
           className="modal--header__icon"
-          size="2x"
           name="times"
           onClick={onClose}
         />
@@ -25,7 +24,7 @@ const Modal = ({ selectedImage, onClose, onUpload }) => {
           onClick={() => onUpload("", (type = "image"))}
           className="modal--body__fab"
         >
-          <FontAwesone name="paper-plane" size="3x" />
+          <FontAwesone name="paper-plane" size="2x" />
         </div>
       </div>
       <div className="modal--footer">

@@ -25,9 +25,7 @@ const MessageView = ({ selectedChat, messages, onAvatarClick, OPvisible }) => {
     {
       name: "paperclip",
       func: () => {
-        console.log("fonction appeleé");
         setFabVisible(!fabVisible);
-        console.log(fabVisible);
       },
     },
     { name: "ellipsis-v", func: () => {} },
