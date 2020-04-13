@@ -46,7 +46,7 @@ meteor npm install
 When installation is complete, run the project with:
 
 ```
-meteor run dev
+meteor
 ```
 
 ## Client
