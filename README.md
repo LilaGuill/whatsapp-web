@@ -60,6 +60,11 @@ meteor
 - Node.js
 - Meteor
 
+## BDD
+
+- MongoDB
+- Minimongo
+
 ## Contact
 
 <a href="https://www.linkedin.com/in/lila-guillermic-66542476/" target="_blank">My Linkedin Profil</a>
