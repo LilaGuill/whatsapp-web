@@ -1,7 +1,7 @@
 <h1 align="center">Whatsapp web Clone</h1>
 
 <p align="center">
-  <img width="500" src="https://github.com/LilaGuill/whatsapp-web/blob/master/public/Kapture.gif" alt="capture-1">
+  <img width="500" src="https://github.com/LilaGuill/whatsapp-web/blob/master/public/images/Kapture.gif" alt="capture-1">
 </p>
 
 <p align="center">
