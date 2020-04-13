@@ -20,11 +20,11 @@
 
 **UI**
 
-- Styled component
+- Styled components
 
 ## Running the project
 
-install Meteor:
+Install Meteor:
 
 ```
 https://www.meteor.com/
